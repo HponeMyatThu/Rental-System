@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F99458FD-FB37-4EB7-9E04-9562F584FACA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rental_System</RootNamespace>
+    <AssemblyName>Rental_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAppliance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAppliance.Designer.cs">
+      <DependentUpon>AdminAppliance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminApplianceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminApplianceType.Designer.cs">
+      <DependentUpon>AdminApplianceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSearch.Designer.cs">
+      <DependentUpon>AdminSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplianceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplianceSearch.Designer.cs">
+      <DependentUpon>ApplianceSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplianceView.cs" />
+    <Compile Include="ClearBox\Clear.cs" />
+    <Compile Include="ClearBox\User.cs" />
+    <Compile Include="CustomRentalTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataTable.cs" />
+    <Compile Include="Empty\AdminEmpty.cs" />
+    <Compile Include="Empty\AdminLoginEmpty.cs" />
+    <Compile Include="Empty\ApplianceEmpty.cs" />
+    <Compile Include="Empty\ApplianceTypeEmpty.cs" />
+    <Compile Include="Empty\FalseVisible\AdminFV.cs" />
+    <Compile Include="Empty\FalseVisible\AdminLoginFV.cs" />
+    <Compile Include="Empty\FalseVisible\ApplianceTypeFV.cs" />
+    <Compile Include="Empty\FalseVisible\UserFV.cs" />
+    <Compile Include="Empty\FalseVisible\UserLoginFV.cs" />
+    <Compile Include="Empty\UserEmpty.cs" />
+    <Compile Include="Empty\UserLoginEmpty.cs" />
+    <Compile Include="FormHelper\AdminFormHelper.cs" />
+    <Compile Include="FormHelper\Appliance.cs" />
+    <Compile Include="FormHelper\ApplianceType.cs" />
+    <Compile Include="FormHelper\UserApplianceView.cs" />
+    <Compile Include="FormHelper\UserFormHelper.cs" />
+    <Compile Include="IDHelper\AdminLastID.cs" />
+    <Compile Include="IDHelper\ApplianceLastID.cs" />
+    <Compile Include="IDHelper\ApplianceTypeLastID.cs" />
+    <Compile Include="IDHelper\RentLastID.cs" />
+    <Compile Include="IDHelper\UserLastID.cs" />
+    <Compile Include="Model\AdminLoginModel.cs" />
+    <Compile Include="Model\AdminModel.cs" />
+    <Compile Include="Model\ApplianceModel.cs" />
+    <Compile Include="Model\ApplianceTypeModel.cs" />
+    <Compile Include="Model\UserLoginModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="override.cs" />
+    <Compile Include="RentalSystem_DataSet.cs">
+      <DependentUpon>RentalSystem_DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Register.Designer.cs">
+      <DependentUpon>Admin_Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentalSystem_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentalSystem_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Service\AdminLoginServiceImp.cs" />
+    <Compile Include="Service\AdminServiceImp.cs" />
+    <Compile Include="Service\ApplianceTypeImp.cs" />
+    <Compile Include="Service\UserServiceImp.cs" />
+    <Compile Include="Start_RentalSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start_RentalSystem.Designer.cs">
+      <DependentUpon>Start_RentalSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserApplianceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserApplianceView.Designer.cs">
+      <DependentUpon>UserApplianceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserHome.Designer.cs">
+      <DependentUpon>UserHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Register.Designer.cs">
+      <DependentUpon>User_Register.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminAppliance.resx">
+      <DependentUpon>AdminAppliance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminApplianceType.resx">
+      <DependentUpon>AdminApplianceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSearch.resx">
+      <DependentUpon>AdminSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Register.resx">
+      <DependentUpon>Admin_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplianceSearch.resx">
+      <DependentUpon>ApplianceSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Start_RentalSystem.resx">
+      <DependentUpon>Start_RentalSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserApplianceView.resx">
+      <DependentUpon>UserApplianceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHome.resx">
+      <DependentUpon>UserHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Register.resx">
+      <DependentUpon>User_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RentalSystem_DataSet.xsc">
+      <DependentUpon>RentalSystem_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RentalSystem_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RentalSystem_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RentalSystem_DataSet.xss">
+      <DependentUpon>RentalSystem_DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
